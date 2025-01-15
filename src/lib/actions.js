@@ -5,11 +5,11 @@ import { z } from "zod";
 const schema = z.object({
     id: z.union([z.coerce.number(), z.string().nullish()]),
     nombre: z.string().trim()
-        .min(1, "Al menos debe tener una letra")
+        .min(3, "Al menos debe tener tres letra")
         .max(10, "Como máximo debe haber 10 letras"),
     edad: z.coerce.number()
         .min(18, "La edad mínima debe ser 18 años")
-        .max(90, "La edad máxima debe ser 90 años"),
+        .max(100, "La edad máxima debe ser 100 años"),
     telefono: z.string().trim()
         .regex(/^6\d{8}$/, "Escribe 9 dígitos, siendo el primero 6"),
     email: z.string().email({ message: "Email no válido" }),
