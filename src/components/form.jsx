@@ -26,8 +26,8 @@ function Formulario() {
             <div className="flex justify-between px-4 py-2 rounded-md bg-slate-200">
                 <label htmlFor="nombre">Nombre:</label>
                 <input id="nombre" name="nombre" className="ring-2"
-                    pattern="[A-Za-zÑñÁÉÍÓÚáéíóú]{3,10}"
-                    title="Mínimo 1 letra, máximo 10 letras"
+                    // pattern="[A-Za-zÑñÁÉÍÓÚáéíóú]{3,10}"
+                    // title="Mínimo 3 letra, máximo 10 letras"
                     defaultValue={state.payload?.get("nombre") || ""}  // para recuperar el valor introducido previamente
                 />
             </div>
@@ -45,7 +45,7 @@ function Formulario() {
             <div className="flex justify-between px-4 py-2 rounded-md bg-slate-200">
                 <label htmlFor="edad">Edad:</label>
                 <input type='number' id="edad" name="edad" className="ring-2"
-                    min={1} max={100}
+                    // min={18} max={100}
                     defaultValue={state.payload?.get("edad") || ""}  // para recuperar el valor introducido previamente
                 />
             </div>
@@ -68,8 +68,8 @@ function Formulario() {
             <div className="flex justify-between px-4 py-2 rounded-md bg-slate-200">
                 <label htmlFor="telefono">Teléfono móvil:</label>
                 <input type='tel' id="telefono" name="telefono" className="ring-2"
-                    pattern="[0-9]{9}"
-                    title="9 dígitos"
+                    // pattern="6[0-9]{8}"
+                    // title="Escribe 9 dígitos, siendo el primero 6"
                     defaultValue={state.payload?.get("telefono") || ""}  // para recuperar el valor introducido previamente
                 />
             </div>
@@ -81,7 +81,7 @@ function Formulario() {
             <div className="flex justify-between px-4 py-2 rounded-md bg-slate-200">
                 <label htmlFor="fecha">Fecha de incidencia:</label>
                 <input type="date" id="fecha" name="fecha" className="ring-2"
-                    min="2025-01-01" max="2025-12-31"
+                    // min="2025-01-01" max="2025-12-31"
                     defaultValue={state.payload?.get("fecha") || new Date().toISOString().split('T')[0]}  // para recuperar el valor introducido previamente
                 />
             </div>
