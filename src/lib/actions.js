@@ -9,13 +9,13 @@ const schema = z.object({
         .max(10, "Como máximo debe haber 10 letras"),
     edad: z.coerce.number()
         .min(18, "La edad mínima debe ser 18 años")
-        .max(65, "La edad máxima debe ser 65 años"),
+        .max(90, "La edad máxima debe ser 90 años"),
     telefono: z.string().trim()
-        .regex(/[678]{1}[0-9]{8}/, "Escribe 9 dígitos, siendo el primero 6,7 u 8"),
+        .regex(/^6\d{8}$/, "Escribe 9 dígitos, siendo el primero 6"),
     email: z.string().email({ message: "Email no válido" }),
     fecha: z.coerce.date()
-        .min(new Date("2024-01-01"), "La fecha debe estar dentro del año 2024")
-        .max(new Date("2024-12-31"), "La fecha debe estar dentro del año 2024"),
+        .min(new Date("2025-01-01"), "La fecha debe estar dentro del año 2025")
+        .max(new Date("2025-12-31"), "La fecha debe estar dentro del año 2025"),
     comentario: z.string().optional()
 })
 

@@ -26,7 +26,7 @@ function Formulario() {
             <div className="flex justify-between px-4 py-2 rounded-md bg-slate-200">
                 <label htmlFor="nombre">Nombre:</label>
                 <input id="nombre" name="nombre" className="ring-2"
-                    pattern="[A-Za-zÑñÁÉÍÓÚáéíóú]{1,10}"
+                    pattern="[A-Za-zÑñÁÉÍÓÚáéíóú]{3,10}"
                     title="Mínimo 1 letra, máximo 10 letras"
                     defaultValue={state.payload?.get("nombre") || ""}  // para recuperar el valor introducido previamente
                 />
@@ -81,7 +81,7 @@ function Formulario() {
             <div className="flex justify-between px-4 py-2 rounded-md bg-slate-200">
                 <label htmlFor="fecha">Fecha de incidencia:</label>
                 <input type="date" id="fecha" name="fecha" className="ring-2"
-                    min="2023-01-01" max="2023-12-31"
+                    min="2025-01-01" max="2025-12-31"
                     defaultValue={state.payload?.get("fecha") || new Date().toISOString().split('T')[0]}  // para recuperar el valor introducido previamente
                 />
             </div>
