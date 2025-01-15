@@ -5,7 +5,7 @@ import { z } from "zod";
 const schema = z.object({
     id: z.union([z.coerce.number(), z.string().nullish()]),
     nombre: z.string().trim()
-        .min(3, "Al menos debe tener tres letra")
+        .min(3, "Al menos debe tener 3 letras")
         .max(10, "Como máximo debe haber 10 letras"),
     edad: z.coerce.number()
         .min(18, "La edad mínima debe ser 18 años")
